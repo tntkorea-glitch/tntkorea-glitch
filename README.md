@@ -64,6 +64,7 @@ powershell -ExecutionPolicy Bypass -File "$env:USERPROFILE\.claude\setup-windows
 | 이름 | 패키지 | 용도 |
 |---|---|---|
 | `sequential-thinking` | `@modelcontextprotocol/server-sequential-thinking` | 복잡한 다단계 추론 보조 |
+| `context7` | `@upstash/context7-mcp` | 라이브러리 최신 공식 문서 실시간 조회 |
 
 **새 MCP 추가하는 법:**
 
@@ -76,7 +77,8 @@ powershell -ExecutionPolicy Bypass -File "$env:USERPROFILE\.claude\setup-windows
 ```powershell
 $mcpServers = @(
     @{ Name = "sequential-thinking"; Command = "npx"; Args = @("-y", "@modelcontextprotocol/server-sequential-thinking") }
-    @{ Name = "github"; Command = "npx"; Args = @("-y", "@modelcontextprotocol/server-github") }  # 신규
+    @{ Name = "context7"; Command = "npx"; Args = @("-y", "@upstash/context7-mcp") }
+    @{ Name = "github"; Command = "npx"; Args = @("-y", "@modelcontextprotocol/server-github") }  # 신규 추가는 이렇게
 )
 ```
 
